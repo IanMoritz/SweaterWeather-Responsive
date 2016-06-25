@@ -43,20 +43,20 @@ function tweetEvent(eventMsg){
         }   
 
         //LOCATION REPORT
-        console.log('LOCATION REPORT:');
-        console.log();
-        console.log('Tweet from:');
-        console.log(from);
-        console.log();
-        console.log('Body of tweet:');
-        console.log(bodyLoc);
-        console.log();
-        console.log('Location in bio:');
-        console.log(bioLoc);
-        console.log();
-        console.log('Location in geotag:'); 
-        console.log(geoLoc);  
-        console.log();
+        // console.log('LOCATION REPORT:');
+        // console.log();
+        // console.log('Tweet from:');
+        // console.log(from);
+        // console.log();
+        // console.log('Body of tweet:');
+        // console.log(bodyLoc);
+        // console.log();
+        // console.log('Location in bio:');
+        // console.log(bioLoc);
+        // console.log();
+        // console.log('Location in geotag:'); 
+        // console.log(geoLoc);  
+        // console.log();
 
         if (geoLoc != null){  //first use geotagged location, this is a full name
             console.log("I'm using Geotag location");
@@ -229,19 +229,20 @@ function tweetEvent(eventMsg){
                                 composeTweet();
 
                                 function composeTweet (){
+                                    if (newtweet.length <= 140)
                                     var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + "° and " + currentSummary + " in " + nameLocation1 + ", " + nameLocation2
                                         console.log("Tweet characters:")
                                         console.log(newtweet.length);
                                         console.log();
                                         sendIt(newtweet);
 
-                                    // else if (newtweet.length >= 140) { //shortened version
-                                    //     var newtweet = '@' + from + tnecks + extra + "It is " + currentTemp + " degrees and " + currentSummary 
-                                    //     console.log("Tweet characters:")
-                                    //     console.log(newtweet.length);
-                                    //     console.log();
-                                    //     sendIt(newtweet);
-                                    //}
+                                     if (newtweet.length >= 140) { //shortened version
+                                        var newtweet = '@' + from + tnecks +  + "It is " + currentTemp + "° in " + nameLocation1 + ", " + nameLocation2
+                                        console.log("Tweet characters:")
+                                        console.log(newtweet.length);
+                                        console.log();
+                                        sendIt(newtweet);
+                                    }
 
                                     function sendIt(txt) {
                                         var tweet = {
