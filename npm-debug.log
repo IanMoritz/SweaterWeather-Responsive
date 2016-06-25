@@ -1,0 +1,168 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'goo.gl' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.4
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'goo.gl', null ]
+7 verbose cache add spec goo.gl
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'goo.gl',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'goo.gl',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed goo.gl@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for goo.gl
+11 info addNameTag [ 'goo.gl', 'latest' ]
+12 silly mapToRegistry name goo.gl
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'goo.gl',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'goo.gl',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/goo.gl
+17 verbose addNameTag registry:https://registry.npmjs.org/goo.gl not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/goo.gl
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 10:38:01 AM
+21 verbose request id ff79366a91ff5967
+22 verbose etag "9E6ILPHL3IHG6H8FP2BCV2IQA"
+23 http request GET https://registry.npmjs.org/goo.gl
+24 http 304 https://registry.npmjs.org/goo.gl
+25 verbose headers { date: 'Sat, 25 Jun 2016 14:38:01 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   etag: '"9E6ILPHL3IHG6H8FP2BCV2IQA"',
+25 verbose headers   age: '0',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-iad2122-IAD',
+25 verbose headers   'x-cache': 'MISS',
+25 verbose headers   'x-cache-hits': '0',
+25 verbose headers   'x-timer': 'S1466865481.221475,VS0,VE110',
+25 verbose headers   vary: 'Accept-Encoding' }
+26 silly get cb [ 304,
+26 silly get   { date: 'Sat, 25 Jun 2016 14:38:01 GMT',
+26 silly get     via: '1.1 varnish',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     etag: '"9E6ILPHL3IHG6H8FP2BCV2IQA"',
+26 silly get     age: '0',
+26 silly get     connection: 'keep-alive',
+26 silly get     'x-served-by': 'cache-iad2122-IAD',
+26 silly get     'x-cache': 'MISS',
+26 silly get     'x-cache-hits': '0',
+26 silly get     'x-timer': 'S1466865481.221475,VS0,VE110',
+26 silly get     vary: 'Accept-Encoding' } ]
+27 verbose etag https://registry.npmjs.org/goo.gl from cache
+28 verbose get saving goo.gl to /Users/IanTMoritz/.npm/registry.npmjs.org/goo.gl/.cache.json
+29 verbose correctMkdir /Users/IanTMoritz/.npm correctMkdir not in flight; initializing
+30 silly addNameTag next cb for goo.gl with tag latest
+31 silly addNamed goo.gl@0.1.4
+32 verbose addNamed "0.1.4" is a plain semver version for goo.gl
+33 silly cache afterAdd goo.gl@0.1.4
+34 verbose afterAdd /Users/IanTMoritz/.npm/goo.gl/0.1.4/package/package.json not in flight; writing
+35 verbose correctMkdir /Users/IanTMoritz/.npm correctMkdir not in flight; initializing
+36 verbose afterAdd /Users/IanTMoritz/.npm/goo.gl/0.1.4/package/package.json written
+37 silly install resolved [ { author: { name: 'Kai Mallea', email: 'kmallea@gmail.com' },
+37 silly install resolved     name: 'goo.gl',
+37 silly install resolved     description: 'A url shortener and expander powered by Google\'s URL shortening service',
+37 silly install resolved     version: '0.1.4',
+37 silly install resolved     homepage: 'https://github.com/kaimallea/node-googl',
+37 silly install resolved     keywords:
+37 silly install resolved      [ 'google',
+37 silly install resolved        'googl',
+37 silly install resolved        'goo.gl',
+37 silly install resolved        'url',
+37 silly install resolved        'urls',
+37 silly install resolved        'short',
+37 silly install resolved        'shorten',
+37 silly install resolved        'shortener',
+37 silly install resolved        'expander' ],
+37 silly install resolved     repository:
+37 silly install resolved      { type: 'git',
+37 silly install resolved        url: 'git://github.com/kaimallea/node-googl.git' },
+37 silly install resolved     engines: { node: '>= v0.10.20' },
+37 silly install resolved     dependencies: { request: '~2.40.0', commander: '~2.2.0', q: '~1.0.1' },
+37 silly install resolved     main: 'lib/googl.js',
+37 silly install resolved     bin: { 'goo.gl': './cli.js' },
+37 silly install resolved     scripts: { test: 'mocha' },
+37 silly install resolved     devDependencies:
+37 silly install resolved      { mocha: '~1.18.2',
+37 silly install resolved        chai: '~1.9.1',
+37 silly install resolved        'chai-as-promised': '~4.1.1' },
+37 silly install resolved     gitHead: '28e34abf9425ca808ad16cdbf5480864db6b66c8',
+37 silly install resolved     bugs: { url: 'https://github.com/kaimallea/node-googl/issues' },
+37 silly install resolved     _id: 'goo.gl@0.1.4',
+37 silly install resolved     _shasum: 'f47cc10a3186789130bcd91d2db28653da457d34',
+37 silly install resolved     _from: 'goo.gl@latest',
+37 silly install resolved     _npmVersion: '2.11.2',
+37 silly install resolved     _nodeVersion: '0.12.5',
+37 silly install resolved     _npmUser: { name: 'kai', email: 'kmallea@gmail.com' },
+37 silly install resolved     maintainers: [ [Object] ],
+37 silly install resolved     dist:
+37 silly install resolved      { shasum: 'f47cc10a3186789130bcd91d2db28653da457d34',
+37 silly install resolved        tarball: 'https://registry.npmjs.org/goo.gl/-/goo.gl-0.1.4.tgz' },
+37 silly install resolved     directories: {},
+37 silly install resolved     _resolved: 'https://registry.npmjs.org/goo.gl/-/goo.gl-0.1.4.tgz',
+37 silly install resolved     readme: 'ERROR: No README data found!' } ]
+38 info install goo.gl@0.1.4 into /usr/local/lib
+39 info installOne goo.gl@0.1.4
+40 verbose installOne of goo.gl to /usr/local/lib not in flight; installing
+41 verbose correctMkdir /Users/IanTMoritz/.npm/_locks correctMkdir not in flight; initializing
+42 verbose lock using /Users/IanTMoritz/.npm/_locks/goo-gl-f28f0b99f3263bb2.lock for /usr/local/lib/node_modules/goo.gl
+43 silly install write writing goo.gl 0.1.4 to /usr/local/lib/node_modules/goo.gl
+44 verbose unbuild lib/node_modules/goo.gl
+45 silly gentlyRm /usr/local/lib/node_modules/goo.gl is being purged from base /usr/local
+46 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/goo.gl
+47 verbose tar unpack /Users/IanTMoritz/.npm/goo.gl/0.1.4/package.tgz
+48 verbose tar unpacking to /usr/local/lib/node_modules/goo.gl
+49 silly gentlyRm /usr/local/lib/node_modules/goo.gl is being purged
+50 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/goo.gl
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 error tar.unpack untar error /Users/IanTMoritz/.npm/goo.gl/0.1.4/package.tgz
+53 verbose unlock done using /Users/IanTMoritz/.npm/_locks/goo-gl-f28f0b99f3263bb2.lock for /usr/local/lib/node_modules/goo.gl
+54 verbose fstream_path /usr/local/lib/node_modules/goo.gl
+55 verbose fstream_type Directory
+56 verbose fstream_class DirWriter
+57 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/goo.gl'
+57 verbose stack     at Error (native)
+58 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+58 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+58 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+59 verbose cwd /Users/IanTMoritz/Documents/GitHub/SweaterWeather-Responsive
+60 error Darwin 15.4.0
+61 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "goo.gl"
+62 error node v4.4.4
+63 error npm  v2.15.1
+64 error path /usr/local/lib/node_modules/goo.gl
+65 error code EACCES
+66 error errno -13
+67 error syscall mkdir
+68 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/goo.gl'
+68 error     at Error (native)
+68 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/goo.gl']
+68 error   errno: -13,
+68 error   code: 'EACCES',
+68 error   syscall: 'mkdir',
+68 error   path: '/usr/local/lib/node_modules/goo.gl',
+68 error   fstream_type: 'Directory',
+68 error   fstream_path: '/usr/local/lib/node_modules/goo.gl',
+68 error   fstream_class: 'DirWriter',
+68 error   fstream_stack:
+68 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+68 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+68 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+69 error Please try running this command again as root/Administrator.
+70 verbose exit [ -13, true ]
+71 verbose unbuild lib/node_modules/goo.gl
+72 silly gentlyRm /usr/local/lib/node_modules/goo.gl is being purged from base /usr/local
+73 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/goo.gl
