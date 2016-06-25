@@ -36,6 +36,7 @@ function tweetEvent(eventMsg){
     bodyLoc = bodyLowerCase.replace("@sweaters_today ","");  //body of tweet formated
     from = eventMsg.user.screen_name;  //user's handle
     bioLoc = eventMsg.user.location;  //location in user's twitter bio
+    ID = eventMsg.id_str
     if (eventMsg.place != null){  //prevents error if tweet is not geotagged 
         geoLoc = eventMsg.place.full_name;  //location if tweet is geo tagged
     }
@@ -152,7 +153,7 @@ function tweetEvent(eventMsg){
 
                     function tneckConversion (){
                         if (currentTemp < 0) {
-                            var tnecks = 'The weather is calling for all the sweaters you have';
+                            var tnecks = 'The weather is calling for all the sweaters you have ';
                         }
 
                         if (currentTemp >= 0 && currentTemp < 10) {
@@ -168,7 +169,7 @@ function tweetEvent(eventMsg){
                         }
 
                         if (currentTemp >= 30 && currentTemp < 40) {
-                            var tnecks = 'The weather is calling for two thick turtleneck. ';
+                            var tnecks = 'The weather is calling for two thick turtlenecks. ';
                         }
 
                         if (currentTemp >= 40 && currentTemp < 50) {
@@ -184,7 +185,7 @@ function tweetEvent(eventMsg){
                         }                        
 
                         if (currentTemp >= 70 && currentTemp < 80) {
-                            var tnecks = "It is a little warm for a sweater. Go with shortleeves and shorts instead. ";
+                            var tnecks = "It is too warm for a sweater. Go with shortleeves instead. ";
                         }
 
                         if (currentTemp >= 80 && currentTemp < 90) {
@@ -192,11 +193,11 @@ function tweetEvent(eventMsg){
                         }
 
                         if (currentTemp >= 90 && currentTemp < 100) {
-                            var tnecks = 'No sweaters today. Grab your sunscreen and shortsleeves!  ';
+                            var tnecks = 'No sweaters today. Grab your sunscreen and shortsleeves! ';
                         }
 
                         if (currentTemp >= 100) {
-                            var tnecks = 'The weather is calling for a bathing suit and air conditioning. ';
+                            var tnecks = 'The weather is calling for a bathing suit and A LOT of air conditioning. ';
                         }
 
                         // if (currentSummary === "rain") {
@@ -234,9 +235,10 @@ function tweetEvent(eventMsg){
                             composeTweet();
 
                             function composeTweet (){
-                                var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + " degrees and " + currentSummary + " " + nameLocation1 + ", " + nameLocation2
+                                var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + " degrees and " + currentSummary + " in " + nameLocation1 + ", " + nameLocation2
                                     console.log("Tweet characters:")
                                     console.log(newtweet.length);
+                                    console.log();
                                     sendIt(newtweet);
 
                                 // else if (newtweet.length >= 140) { //shortened version
@@ -246,6 +248,26 @@ function tweetEvent(eventMsg){
                                 //     console.log();
                                 //     sendIt(newtweet);
                                 //}
+
+                                function sendIt(txt) {
+                                    var tweet = {
+                                        status: (txt),
+                                        in_reply_to_status_id: ID
+                                    }
+                                    console.log(txt);
+
+                                T.post('statuses/update', tweet, tweeted);
+
+                                    function tweeted(err, data, response) {
+                                        if (err) {
+                                            console.log("Something went wrong with posting:");
+                                            console.log(err)
+                                        } else {
+                                            console.log("It worked!");
+                                            console.log();
+                                        }
+                                    }
+                                }
                             }
                             })
                         }
@@ -257,33 +279,6 @@ function tweetEvent(eventMsg){
     }
 };
 
-
-
-function sendIt(txt) {
-    console.log(from);
-    if (from === null || from === "Sweaters_Today") {
-        exit();
-    }
-    else {
-    var tweet = {
-        status: (txt)
-    }
-    console.log("Export tweet");
-    console.log(txt);
-
-    T.post('statuses/update', tweet, tweeted);
-
-        function tweeted(err, data, response) {
-            if (err) {
-                console.log("Something went wrong with posting:");
-                console.log(err)
-            } else {
-                console.log("It worked!");
-                console.log();
-            }
-        }
-    }
-}
 
 function sendError(){  //relearn how to use functions
     console.log(from);
