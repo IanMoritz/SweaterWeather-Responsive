@@ -224,20 +224,17 @@ function tweetEvent(eventMsg){
                                     sendError(); 
                                 }
 
-                            var fs = require ('fs');  //write JSON 1/3
-                            var json = JSON.stringify(data,null,2);  //write JSON 2/3
-                            fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
+                            // var fs = require ('fs');  //write JSON 1/3
+                            // var json = JSON.stringify(data,null,2);  //write JSON 2/3
+                            // fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
 
                             nameLocation1 = data.results[0].address_components[1].short_name,
                             nameLocation2 = data.results[0].address_components[4].short_name,
 
-                            console.log (nameLocation1);
-                            console.log (nameLocation2);
-
                             composeTweet();
 
                             function composeTweet (){
-                                var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + " degrees and " + currentSummary + " " + r
+                                var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + " degrees and " + currentSummary + " " + nameLocation1 + ", " + nameLocation2
                                     console.log("Tweet characters:")
                                     console.log(newtweet.length);
                                     sendIt(newtweet);
