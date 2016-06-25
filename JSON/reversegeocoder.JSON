@@ -1,0 +1,610 @@
+{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "Stadium Drive",
+          "short_name": "Stadium Dr",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "College Park",
+          "short_name": "College Park",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Berwyn",
+          "short_name": "21, Berwyn",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Prince George's County",
+          "short_name": "Prince George's County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "20740",
+          "short_name": "20740",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "Stadium Dr, College Park, MD 20740, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 38.9905646,
+            "lng": -76.9440801
+          },
+          "southwest": {
+            "lat": 38.9905621,
+            "lng": -76.9441655
+          }
+        },
+        "location": {
+          "lat": 38.9905634,
+          "lng": -76.9441228
+        },
+        "location_type": "GEOMETRIC_CENTER",
+        "viewport": {
+          "northeast": {
+            "lat": 38.9919123302915,
+            "lng": -76.94277381970849
+          },
+          "southwest": {
+            "lat": 38.9892143697085,
+            "lng": -76.9454717802915
+          }
+        }
+      },
+      "place_id": "ChIJfR-1VJjGt4kR9DVQS7TiWHE",
+      "types": [
+        "route"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Stadium Dr at the Varsity Team House",
+          "short_name": "Stadium Dr at the Varsity Team House",
+          "types": [
+            "establishment",
+            "point_of_interest"
+          ]
+        },
+        {
+          "long_name": "College Park",
+          "short_name": "College Park",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Berwyn",
+          "short_name": "21, Berwyn",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Prince George's County",
+          "short_name": "Prince George's County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "20742",
+          "short_name": "20742",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "Stadium Dr at the Varsity Team House, College Park, MD 20742, USA",
+      "geometry": {
+        "location": {
+          "lat": 38.990548,
+          "lng": -76.943713
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 38.99189698029149,
+            "lng": -76.94236401970849
+          },
+          "southwest": {
+            "lat": 38.98919901970849,
+            "lng": -76.9450619802915
+          }
+        }
+      },
+      "place_id": "ChIJXYK-VpjGt4kRXMmS1WZx0MQ",
+      "types": [
+        "bus_station",
+        "establishment",
+        "point_of_interest",
+        "transit_station"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "College Park",
+          "short_name": "College Park",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Berwyn",
+          "short_name": "21, Berwyn",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Prince George's County",
+          "short_name": "Prince George's County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "College Park, MD, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 39.025559,
+            "lng": -76.90914699999999
+          },
+          "southwest": {
+            "lat": 38.9711091,
+            "lng": -76.965351
+          }
+        },
+        "location": {
+          "lat": 38.9896967,
+          "lng": -76.93776
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 39.025559,
+            "lng": -76.90914699999999
+          },
+          "southwest": {
+            "lat": 38.9711091,
+            "lng": -76.965351
+          }
+        }
+      },
+      "place_id": "ChIJmUZxDR7Et4kRlW3TbeMNjOs",
+      "types": [
+        "locality",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "20742",
+          "short_name": "20742",
+          "types": [
+            "postal_code"
+          ]
+        },
+        {
+          "long_name": "College Park",
+          "short_name": "College Park",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Prince George's County",
+          "short_name": "Prince George's County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "College Park, MD 20742, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 39.0071678,
+            "lng": -76.920996
+          },
+          "southwest": {
+            "lat": 38.9674974,
+            "lng": -76.9617191
+          }
+        },
+        "location": {
+          "lat": 38.9908487,
+          "lng": -76.944141
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 39.0071678,
+            "lng": -76.920996
+          },
+          "southwest": {
+            "lat": 38.9674974,
+            "lng": -76.9617191
+          }
+        }
+      },
+      "place_id": "ChIJ1VsH7L7Gt4kRChJh2NSb06E",
+      "types": [
+        "postal_code"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Berwyn",
+          "short_name": "21, Berwyn",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Prince George's County",
+          "short_name": "Prince George's County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "21, Berwyn, MD, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 39.039742,
+            "lng": -76.8429301
+          },
+          "southwest": {
+            "lat": 38.9711091,
+            "lng": -76.9773429
+          }
+        },
+        "location": {
+          "lat": 38.9951058,
+          "lng": -76.9263647
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 39.039742,
+            "lng": -76.8429301
+          },
+          "southwest": {
+            "lat": 38.9711091,
+            "lng": -76.9773429
+          }
+        }
+      },
+      "place_id": "ChIJ-67Xc1bCt4kRbrcKC5qBmlM",
+      "types": [
+        "administrative_area_level_3",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Prince George's County",
+          "short_name": "Prince George's County",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Prince George's County, MD, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 39.1311886,
+            "lng": -76.6692499
+          },
+          "southwest": {
+            "lat": 38.5366107,
+            "lng": -77.089524
+          }
+        },
+        "location": {
+          "lat": 38.78492110000001,
+          "lng": -76.8720961
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 39.1311886,
+            "lng": -76.6692499
+          },
+          "southwest": {
+            "lat": 38.5366107,
+            "lng": -77.089524
+          }
+        }
+      },
+      "place_id": "ChIJp_ap_s1LtokR_Lf7mF9L8mg",
+      "types": [
+        "administrative_area_level_2",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+          "short_name": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+          "types": [
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Washington-Arlington-Alexandria, DC-VA-MD-WV, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 39.720018,
+            "lng": -76.38622889999999
+          },
+          "southwest": {
+            "lat": 37.9911599,
+            "lng": -78.386682
+          }
+        },
+        "location": {
+          "lat": 39.1289725,
+          "lng": -77.3783789
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 39.720023,
+            "lng": -76.38622889999999
+          },
+          "southwest": {
+            "lat": 37.9911599,
+            "lng": -78.386682
+          }
+        }
+      },
+      "place_id": "ChIJy25QE7lFtokRgaAnbc9iMr8",
+      "types": [
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Maryland",
+          "short_name": "MD",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Maryland, USA",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 39.7230371,
+            "lng": -75.0491813
+          },
+          "southwest": {
+            "lat": 37.8894789,
+            "lng": -79.4876511
+          }
+        },
+        "location": {
+          "lat": 39.0457549,
+          "lng": -76.64127119999999
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 39.7231914,
+            "lng": -75.0491813
+          },
+          "southwest": {
+            "lat": 37.8898248,
+            "lng": -79.4876511
+          }
+        }
+      },
+      "place_id": "ChIJ35Dx6etNtokRsfZVdmU3r_I",
+      "types": [
+        "administrative_area_level_1",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "United States",
+          "short_name": "US",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "United States",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 71.3867745,
+            "lng": -66.9502861
+          },
+          "southwest": {
+            "lat": 18.9106771,
+            "lng": 172.4458954
+          }
+        },
+        "location": {
+          "lat": 37.09024,
+          "lng": -95.712891
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 49.38,
+            "lng": -66.94
+          },
+          "southwest": {
+            "lat": 25.82,
+            "lng": -124.39
+          }
+        }
+      },
+      "place_id": "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+      "types": [
+        "country",
+        "political"
+      ]
+    }
+  ],
+  "status": "OK"
+}
