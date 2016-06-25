@@ -15,6 +15,10 @@ var stream = T.stream('user');
 stream.on('tweet',tweetEvent);
 
 function tweetEvent(eventMsg){
+
+    var fs = require ('fs');    //write JSON 1/3
+    var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
+    fs.writeFile("tweet.JSON", json);  //write JSON 3/3
     
     //Is this a tweet at me?    
     replyTo = eventMsg.in_reply_to_screen_name;
@@ -23,10 +27,6 @@ function tweetEvent(eventMsg){
     if (replyToStandard === 'sweaters_today'){
         respond();
     }
-
-    // var fs = require ('fs');    //write JSON 1/3
-    // var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
-    // fs.writeFile("tweet.JSON", json);  //write JSON 3/3
 
     function respond (){
         body = eventMsg.text; //redudent fix later
@@ -223,17 +223,17 @@ function tweetEvent(eventMsg){
                                 // var json = JSON.stringify(data,null,2);  //write JSON 2/3
                                 // fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
 
-                                nameLocation1 = data.results[2].address_components[1].short_name,
-                                nameLocation2 = data.results[2].address_components[3].short_name,
+                                nameLocation1 = data.results[0].address_components[1].short_name,
+                                nameLocation2 = data.results[0].address_components[4].short_name,
 
                                 composeTweet();
 
                                 function composeTweet (){
-                                    var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + " ° and " + currentSummary + " in " + nameLocation1 + ", " + nameLocation2
+                                    var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + "° and " + currentSummary + " in " + nameLocation1 + ", " + nameLocation2
                                         console.log("Tweet characters:")
                                         console.log(newtweet.length);
                                         console.log();
-                                        //sendIt(newtweet);
+                                        sendIt(newtweet);
 
                                     // else if (newtweet.length >= 140) { //shortened version
                                     //     var newtweet = '@' + from + tnecks + extra + "It is " + currentTemp + " degrees and " + currentSummary 
