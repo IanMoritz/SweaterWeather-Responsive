@@ -9,7 +9,6 @@ var forecastconfig = require('./config/forecastconfig')
 var forecast = new Forecast(forecastconfig);
 var T = new Twit(twitconfig);
 
-//Set up user stream
 var stream = T.stream('user');
 //Anytime someone tweets at me  
 stream.on('tweet',tweetEvent);
@@ -219,47 +218,54 @@ function tweetEvent(eventMsg){
                                         sendError(); 
                                     }
 
-                                // var fs = require ('fs');  //write JSON 1/3
-                                // var json = JSON.stringify(data,null,2);  //write JSON 2/3
-                                // fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
+                                var fs = require ('fs');  //write JSON 1/3
+                                var json = JSON.stringify(data,null,2);  //write JSON 2/3
+                                fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
 
-                                nameLocation1 = data.results[0].address_components[1].short_name,
-                                nameLocation2 = data.results[0].address_components[4].short_name,
+                                // nameLocation1 = data.results[0].address_components[1].short_name,
+                                nameLocation1 = data.results[0].formatted_address,
+                                nameLocation2 = nameLocation1.split(', ')
+                                nameLocation3 = nameLocation2[1] + ", " + nameLocation2[2].substring(0, 2)
+                                console.log(nameLocation3)
+                                console.log()
 
                                 composeTweet();
 
                                 function composeTweet (){
-                                    if (newtweet.length <= 140)
-                                    var newtweet = '@' + from + " " + tnecks + "It is " + currentTemp + "° and " + currentSummary + " in " + nameLocation1 + ", " + nameLocation2
-                                        console.log("Tweet characters:")
-                                        console.log(newtweet.length);
-                                        console.log();
-                                        sendIt(newtweet);
+                                    part1 = '@' + from + " "
+                                    part2 = tnecks
+                                    part3 = "It is " + currentTemp  + "° and " + currentSummary
+                                    part4 = " in "nameLocation3 + " " 
+                                    part5 = "http://forecast.io/#/f/" + subWeatherLat + subWeatherLong
 
-                                     if (newtweet.length >= 140) { //shortened version
-                                        var newtweet = '@' + from + tnecks +  + "It is " + currentTemp + "° in " + nameLocation1 + ", " + nameLocation2
-                                        console.log("Tweet characters:")
-                                        console.log(newtweet.length);
-                                        console.log();
+                                    part1L = part1.length
+                                    part2L = part2.length
+                                    part3L = part3.length
+                                    part4L = part4.length
+                                    part5L = part5.length
+
+                                    option1 = part1L + part2L + part3L + part4L + part5L
+                                    option2 = part1L + part2L + part3L + part4L
+                                    option3 = part1L + part2L + part3L 
+                                    option4 = part1L + part2L     
+                                                                  
+                                    if (option1 <= 140){
+                                        newtweet = part1 + part2 + part3 + part4 + part5
                                         sendIt(newtweet);
                                     }
-
-                                    function sendIt(txt) {
-                                        var tweet = {
-                                            status: (txt),
-                                            in_reply_to_status_id: ID
+                                    else if (option1 > 140){
+                                        if (option2 <= 140){
+                                            newtweet = part1 + part2 + part3 + part4
+                                            sendIt(newtweet);
                                         }
-                                        console.log(txt);
-
-                                    T.post('statuses/update', tweet, tweeted);
-
-                                        function tweeted(err, data, response) {
-                                            if (err) {
-                                                console.log("Something went wrong with posting:");
-                                                console.log(err)
-                                            } else {
-                                                console.log("It worked!");
-                                                console.log();
+                                        else if (option2 > 140){
+                                            if (option3 <= 140){
+                                                newtweet = part1 + part2 + part3 
+                                                sendIt(newtweet);
+                                            }
+                                            else {
+                                                newtweet = part1 + part2  
+                                                sendIt(newtweet);
                                             }
                                         }
                                     }
@@ -272,6 +278,27 @@ function tweetEvent(eventMsg){
         }   
     }
 };
+
+function sendIt(txt) {
+    var tweet = {
+        status: (txt),
+        in_reply_to_status_id: ID
+    }
+    console.log("The tweet is:")
+    console.log(txt);
+
+// T.post('statuses/update', tweet, tweeted);
+
+    function tweeted(err, data, response) {
+        if (err) {
+            console.log("Something went wrong with posting:");
+            console.log(err)
+        } else {
+            console.log("It worked!");
+            console.log();
+        }
+    }
+}
 
 
 function sendError(){  //relearn how to use functions
