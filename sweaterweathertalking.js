@@ -93,8 +93,8 @@ function tweetEvent(eventMsg){
             // var fs = require ('fs');  //write JSON 1/3
             // var json = JSON.stringify(data,null,2);  //write JSON 2/3
             // fs.writeFile("geocoder.JSON", json);  //write JSON 3/3
-            var lat = data.results[0].geometry.location.lat; 
-            var long = data.results[0].geometry.location.lng;
+            lat = data.results[0].geometry.location.lat; 
+            long = data.results[0].geometry.location.lng;
             // console.log('Converted to location:');
             // console.log(lat + ', ' + long);
             // console.log(); 
@@ -150,51 +150,51 @@ function tweetEvent(eventMsg){
 
                         function tneckConversion (){
                             if (currentTemp < 0) {
-                                var tnecks = 'The weather is calling for all the sweaters you have ';
+                                tnecks = 'The weather is calling for all the sweaters you have ';
                             }
 
                             if (currentTemp >= 0 && currentTemp < 10) {
-                                var tnecks = 'The weather is calling for maximum sweaters ';
+                                tnecks = 'The weather is calling for maximum sweaters ';
                             }
 
                             if (currentTemp >= 10 && currentTemp < 20) {
-                                var tnecks = 'The weather is calling for maximum sweaters and a cup of hot choclate.';
+                                tnecks = 'The weather is calling for maximum sweaters and a cup of hot choclate.';
                             }
 
                             if (currentTemp >= 20 && currentTemp < 30) {
-                                var tnecks = 'Brrrrr! Bundle up with a wool turtleneck. ';
+                                tnecks = 'Brrrrr! Bundle up with a wool turtleneck. ';
                             }
 
                             if (currentTemp >= 30 && currentTemp < 40) {
-                                var tnecks = 'The weather is calling for two thick turtlenecks. ';
+                                tnecks = 'The weather is calling for two thick turtlenecks. ';
                             }
 
                             if (currentTemp >= 40 && currentTemp < 50) {
-                                var tnecks = 'One nice sweatershirt should do the trick! ';
+                                tnecks = 'One nice sweatershirt should do the trick! ';
                             }
 
                             if (currentTemp >= 50 && currentTemp < 60) {
-                                var tnecks = 'The weather is calling for one light sweater today. ';
+                                tnecks = 'The weather is calling for one light sweater today. ';
                             }
 
                             if (currentTemp >= 60 && currentTemp < 70) {
-                                var tnecks = 'The weather is calling for longsleeves. ';
+                                tnecks = 'The weather is calling for longsleeves. ';
                             }                        
 
                             if (currentTemp >= 70 && currentTemp < 80) {
-                                var tnecks = "It is too warm for a sweater. Go with shortsleeves instead. ";
+                                tnecks = "It is too warm for a sweater. Go with shortsleeves instead. ";
                             }
 
                             if (currentTemp >= 80 && currentTemp < 90) {
-                                var tnecks = "It's a hot one. No sweaters today. Break out the linen, jorts, and searsucker. ";
+                                tnecks = "It's a hot one. No sweaters today. Break out the linen, jorts, and searsucker. ";
                             }
 
                             if (currentTemp >= 90 && currentTemp < 100) {
-                                var tnecks = 'No sweaters today. Grab your sunscreen and shortsleeves! ';
+                                tnecks = 'No sweaters today. Grab your sunscreen and shortsleeves! ';
                             }
 
                             if (currentTemp >= 100) {
-                                var tnecks = 'The weather is calling for a bathing suit and A LOT of air conditioning. ';
+                                tnecks = 'The weather is calling for a bathing suit and A LOT of air conditioning. ';
                             }
 
                             // if (currentSummary === "rain") {
@@ -218,9 +218,9 @@ function tweetEvent(eventMsg){
                                         sendError(); 
                                     }
 
-                                var fs = require ('fs');  //write JSON 1/3
-                                var json = JSON.stringify(data,null,2);  //write JSON 2/3
-                                fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
+                                // var fs = require ('fs');  //write JSON 1/3
+                                // var json = JSON.stringify(data,null,2);  //write JSON 2/3
+                                // fs.writeFile("reversegeocoder.JSON", json);  //write JSON 3/3
 
                                 // nameLocation1 = data.results[0].address_components[1].short_name,
                                 nameLocation1 = data.results[0].formatted_address,
@@ -287,7 +287,7 @@ function sendIt(txt) {
     console.log("The tweet is:")
     console.log(txt);
 
-// T.post('statuses/update', tweet, tweeted);
+T.post('statuses/update', tweet, tweeted);
 
     function tweeted(err, data, response) {
         if (err) {
