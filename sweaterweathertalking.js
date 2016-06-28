@@ -15,15 +15,13 @@ stream.on('tweet',tweetEvent);
 
 function tweetEvent(eventMsg){
 
-    var fs = require ('fs');    //write JSON 1/3
-    var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
-    fs.writeFile("tweet.JSON", json);  //write JSON 3/3
+    // var fs = require ('fs');    //write JSON 1/3
+    // var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
+    // fs.writeFile("tweet.JSON", json);  //write JSON 3/3
     
-    //Is this a tweet at me?    
-    replyTo = eventMsg.in_reply_to_screen_name;
-    replyToStandard = replyTo.toLowerCase();
+    spark = eventMsg.text.search(/sweaters_today/i);
 
-    if (replyToStandard === 'sweaters_today'){
+    if (spark != -1){
         respond();
     }
 
@@ -149,52 +147,94 @@ function tweetEvent(eventMsg){
                     tneckConversion();
 
                         function tneckConversion (){
-                            if (currentTemp < 0) {
-                                tnecks = 'The weather is calling for all the sweaters you have ';
+                            if (currentTemp < 10) {
+                                options = [
+                                'The weather is calling for maximum sweaters ',
+                                'The weather is calling for all the sweaters you have ',
+                                "Start with a snuggie."
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }
 
-                            if (currentTemp >= 0 && currentTemp < 10) {
-                                tnecks = 'The weather is calling for maximum sweaters ';
-                            }
-
-                            if (currentTemp >= 10 && currentTemp < 20) {
-                                tnecks = 'The weather is calling for maximum sweaters and a cup of hot choclate.';
-                            }
-
-                            if (currentTemp >= 20 && currentTemp < 30) {
-                                tnecks = 'Brrrrr! Bundle up with a wool turtleneck. ';
+                            if (currentTemp >= 10 && currentTemp < 30) {
+                                options = [
+                                'The weather is calling for maximum sweaters and a cup of hot choclate. '
+                                '4 sweaters...or just wear a winter jacket. '
+                                'Brrrrr! Bundle up with a wool turtleneck. ',
+                                "You're going to need a hat and gloves too. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }
 
                             if (currentTemp >= 30 && currentTemp < 40) {
-                                tnecks = 'The weather is calling for two thick turtlenecks. ';
+                                options = [
+                                'The weather is calling for two thick turtlenecks. ',
+                                "You're going to need your jacket today. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }
 
                             if (currentTemp >= 40 && currentTemp < 50) {
-                                tnecks = 'One nice sweatershirt should do the trick! ';
+                                options = [
+                                'One nice sweatershirt should do the trick! ',
+                                "Grab a light jacket on your way out. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }
 
                             if (currentTemp >= 50 && currentTemp < 60) {
-                                tnecks = 'The weather is calling for one light sweater today. ';
+                                options = [
+                                'The weather is calling for one light sweater today. ',
+                                "Find your lightest sweater. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }
 
                             if (currentTemp >= 60 && currentTemp < 70) {
-                                tnecks = 'The weather is calling for longsleeves. ';
+                                options = [
+                                'The weather is calling for longsleeves. ',
+                                "Negative 1 sweater. ",
+                                "Pack the sweaters away, a light jacket will do! "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }                        
 
                             if (currentTemp >= 70 && currentTemp < 80) {
-                                tnecks = "It is too warm for a sweater. Go with shortsleeves instead. ";
+                                options = [
+                                "It is too warm for a sweater. Go with shortsleeves instead. ",
+                                "Negative 2 sweaters. "
+                                "Shorts and shortsleeves today. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]
                             }
 
                             if (currentTemp >= 80 && currentTemp < 90) {
-                                tnecks = "It's a hot one. No sweaters today. Break out the linen, jorts, and searsucker. ";
+                                options = [
+                                "It's a hot one. No sweaters today. Break out the linen, jorts, and searsucker. ",
+                                "Negative 3 sweaters. ",
+                                "Suns out, guns out. ",
+                                "Tank top today. "
+                                "Wear as little as possible. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]
                             }
 
                             if (currentTemp >= 90 && currentTemp < 100) {
-                                tnecks = 'No sweaters today. Grab your sunscreen and shortsleeves! ';
+                                options = [
+                                'No sweaters. Grab your sunscreen and shortsleeves! ',
+                                "Tell Grandma to hold off on that new sweater, today you'll only need a t-shirt. ",
+                                "Find  your bathing suit and the closest body of water. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]
                             }
 
                             if (currentTemp >= 100) {
-                                tnecks = 'The weather is calling for a bathing suit and A LOT of air conditioning. ';
+                                options = [
+                                'The weather is calling for a bathing suit and A LOT of air conditioning. ',
+                                "Forget the sweaters, AC should be your best friend today. "
+                                "Knit yourself a sweater out of sunscreen. "
+                                ]
+                                tnecks = options[Math.floor(Math.random() * options.length)]                                
                             }
 
                             // if (currentSummary === "rain") {
@@ -270,12 +310,12 @@ function tweetEvent(eventMsg){
                                         }
                                     }
                                 }
-                            })
-                        }
-                    })
-                }
-            })
-        }   
+                            })  //geocode
+                        }  //tneck
+                    })  //forecast
+                }  //fcast
+            })  //geocode
+        }  //llconversion  
     }
 };
 
