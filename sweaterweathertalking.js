@@ -276,7 +276,7 @@ function tweetEvent(eventMsg){
                                     part2 = tnecks
                                     part3 = "It is " + currentTemp  + "° and " + currentSummary
                                     part4 = " in "+ nameLocation3 + " " 
-                                    part5 = "http://forecast.io/#/f/" + subWeatherLat + subWeatherLong
+                                    part5 = "http://forecast.io/#/f/" + subWeatherLat + "," + subWeatherLong
 
                                     part1L = part1.length
                                     part2L = part2.length
