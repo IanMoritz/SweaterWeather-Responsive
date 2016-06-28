@@ -272,7 +272,7 @@ function tweetEvent(eventMsg){
                                 composeTweet();
 
                                 function composeTweet (){
-                                    part1 = "@" + from " "
+                                    part1 = "@" + from + " "
                                     part2 = tnecks
                                     part3 = "It is " + currentTemp  + "° and " + currentSummary
                                     part4 = " in "+ nameLocation3 + " " 
