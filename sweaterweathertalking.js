@@ -80,7 +80,7 @@ function tweetEvent(eventMsg){
             }
         }
 
-            function llConversion (){ 
+        function llConversion (){ 
             geocoder.geocode(locToLL, function ( err, data ) {  //geocoder module saving the day
                 if (err) {
                     console.log("llConversion error:");
@@ -158,8 +158,8 @@ function tweetEvent(eventMsg){
 
                             if (currentTemp >= 10 && currentTemp < 30) {
                                 options = [
-                                'The weather is calling for maximum sweaters and a cup of hot choclate. '
-                                '4 sweaters...or just wear a winter jacket. '
+                                'The weather is calling for maximum sweaters and a cup of hot choclate. ',
+                                "4 sweaters... or just wear a winter jacket. ",
                                 'Brrrrr! Bundle up with a wool turtleneck. ',
                                 "You're going to need a hat and gloves too. "
                                 ]
@@ -202,7 +202,7 @@ function tweetEvent(eventMsg){
                             if (currentTemp >= 70 && currentTemp < 80) {
                                 options = [
                                 "It is too warm for a sweater. Go with shortsleeves instead. ",
-                                "Negative 2 sweaters. "
+                                "Negative 2 sweaters. ",
                                 "Shorts and shortsleeves today. "
                                 ]
                                 tnecks = options[Math.floor(Math.random() * options.length)]
@@ -213,7 +213,7 @@ function tweetEvent(eventMsg){
                                 "It's a hot one. No sweaters today. Break out the linen, jorts, and searsucker. ",
                                 "Negative 3 sweaters. ",
                                 "Suns out, guns out. ",
-                                "Tank top today. "
+                                "Tank top today. ",
                                 "Wear as little as possible. "
                                 ]
                                 tnecks = options[Math.floor(Math.random() * options.length)]
@@ -231,7 +231,7 @@ function tweetEvent(eventMsg){
                             if (currentTemp >= 100) {
                                 options = [
                                 'The weather is calling for a bathing suit and A LOT of air conditioning. ',
-                                "Forget the sweaters, AC should be your best friend today. "
+                                "Forget the sweaters, AC should be your best friend today. ",
                                 "Knit yourself a sweater out of sunscreen. "
                                 ]
                                 tnecks = options[Math.floor(Math.random() * options.length)]                                
@@ -272,10 +272,10 @@ function tweetEvent(eventMsg){
                                 composeTweet();
 
                                 function composeTweet (){
-                                    part1 = '@' + from + " "
+                                    part1 = ""
                                     part2 = tnecks
                                     part3 = "It is " + currentTemp  + "° and " + currentSummary
-                                    part4 = " in "+ nameLocation3 + " " 
+                                    part4 = " in "+ locToLL + " " 
                                     part5 = "http://forecast.io/#/f/" + subWeatherLat + subWeatherLong
 
                                     part1L = part1.length
@@ -315,7 +315,7 @@ function tweetEvent(eventMsg){
                     })  //forecast
                 }  //fcast
             })  //geocode
-        }  //llconversion  
+        }  //llconversion 
     }
 };
 
