@@ -15,9 +15,9 @@ stream.on('tweet',tweetEvent);
 
 function tweetEvent(eventMsg){
 
-    // var fs = require ('fs');    //write JSON 1/3
-    // var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
-    // fs.writeFile("tweet.JSON", json);  //write JSON 3/3
+    var fs = require ('fs');    //write JSON 1/3
+    var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
+    fs.writeFile("tweet.JSON", json);  //write JSON 3/3
     
     spark = eventMsg.text.search(/sweaters_today/i);
 
@@ -26,8 +26,7 @@ function tweetEvent(eventMsg){
     }
 
     function respond (){
-        body = eventMsg.text; //redudent fix later
-        bodyLowerCase = body.toLowerCase();  //redundent fix later
+        bodyLowerCase = eventMsg.text.toLowerCase();  //redundent fix later
         bodyLoc = bodyLowerCase.replace("@sweaters_today ","");  //body of tweet formated
         from = eventMsg.user.screen_name;  //user's handle
         bioLoc = eventMsg.user.location;  //location in user's twitter bio
@@ -65,6 +64,7 @@ function tweetEvent(eventMsg){
         else {   //second use location in body of tweet, this should be a zipcode
             console.log("I'm using Body location");
             console.log();
+            bodyLoc = bodyLoc.substring(0,from.length);
             var zipCode = (bodyLoc.replace(/[^0-9\.]+/g, "").substring(0,5));  //find zipcode
             console.log('The zip code is:');
             console.log(zipCode);
