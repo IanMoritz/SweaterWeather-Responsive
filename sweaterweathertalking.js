@@ -38,7 +38,7 @@ function tweetEvent(eventMsg){
             geoLoc = null
         }   
 
-        //LOCATION REPORT
+        // //LOCATION REPORT
         // console.log('LOCATION REPORT:');
         // console.log();
         // console.log('Tweet from:');
@@ -60,25 +60,23 @@ function tweetEvent(eventMsg){
             var locToLL = geoLoc;
             llConversion();
         } 
-
         else {   //second use location in body of tweet, this should be a zipcode
-            console.log("I'm using Body location");
-            console.log();
-            bodyLoc = bodyLoc.substring(0,from.length);
-            var zipCode = (bodyLoc.replace(/[^0-9\.]+/g, "").substring(0,5));  //find zipcode
-            console.log('The zip code is:');
-            console.log(zipCode);
-            console.log();
-            var locToLL = zipCode;
+             console.log("I'm using Body location");
+             console.log();
+             var zipCode = (bodyLoc.replace(/[^0-9\.]+/g, "").substring(0,5));  //find zipcode
+             console.log('The zip code is:');
+             console.log(zipCode);
+             console.log();
+             var locToLL = zipCode;
 
-            if (zipCode.length != 5) {  //make sure there sequential numbers in tweet
-                sendError(); 
-            }
+             if (zipCode.length != 5) {  
+                 sendError(); 
+             }
 
-            else {
-                llConversion();
-            }
-        }
+             else {
+                 llConversion();
+             }
+         }
 
         function llConversion (){ 
             geocoder.geocode(locToLL, function ( err, data ) {  //geocoder module saving the day
@@ -93,9 +91,9 @@ function tweetEvent(eventMsg){
             // fs.writeFile("geocoder.JSON", json);  //write JSON 3/3
             lat = data.results[0].geometry.location.lat; 
             long = data.results[0].geometry.location.lng;
-            // console.log('Converted to location:');
-            // console.log(lat + ', ' + long);
-            // console.log(); 
+            // // console.log('Converted to location:');
+            // // console.log(lat + ', ' + long);
+            // // console.log(); 
             fCast();
 
                 function fCast(){
