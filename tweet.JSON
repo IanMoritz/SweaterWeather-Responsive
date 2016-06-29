@@ -1,8 +1,8 @@
 {
-  "created_at": "Tue Jun 28 15:21:27 +0000 2016",
-  "id": 747812162941423600,
-  "id_str": "747812162941423616",
-  "text": "🚮🚮🚮 https://t.co/UMPZhDv5Sb",
+  "created_at": "Tue Jun 28 23:16:04 +0000 2016",
+  "id": 747931600185360400,
+  "id_str": "747931600185360384",
+  "text": "RT @DanMentos: .@PartyCity hey guys you were right the Harambe piñata was a bad idea",
   "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
   "truncated": false,
   "in_reply_to_status_id": null,
@@ -23,8 +23,8 @@
     "followers_count": 575,
     "friends_count": 584,
     "listed_count": 5,
-    "favourites_count": 13905,
-    "statuses_count": 16379,
+    "favourites_count": 13910,
+    "statuses_count": 16384,
     "created_at": "Mon May 23 21:27:42 +0000 2011",
     "utc_offset": -14400,
     "time_zone": "Eastern Time (US & Canada)",
@@ -52,48 +52,14 @@
   },
   "geo": null,
   "coordinates": null,
-  "place": {
-    "id": "92b2158a6d509767",
-    "url": "https://api.twitter.com/1.1/geo/id/92b2158a6d509767.json",
-    "place_type": "city",
-    "name": "Ann Arbor",
-    "full_name": "Ann Arbor, MI",
-    "country_code": "US",
-    "country": "United States",
-    "bounding_box": {
-      "type": "Polygon",
-      "coordinates": [
-        [
-          [
-            -83.800262,
-            42.215087
-          ],
-          [
-            -83.800262,
-            42.326592
-          ],
-          [
-            -83.659681,
-            42.326592
-          ],
-          [
-            -83.659681,
-            42.215087
-          ]
-        ]
-      ]
-    },
-    "attributes": {}
-  },
+  "place": null,
   "contributors": null,
-  "quoted_status_id": 747537420233637900,
-  "quoted_status_id_str": "747537420233637888",
-  "quoted_status": {
-    "created_at": "Mon Jun 27 21:09:44 +0000 2016",
-    "id": 747537420233637900,
-    "id_str": "747537420233637888",
-    "text": "Lena Dunham On Kanye's '#Famous' Video: 'It Makes Me Feel Sad &amp; Unsafe'\nhttps://t.co/BGsCprXcJq https://t.co/DYFebV5qrN",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "retweeted_status": {
+    "created_at": "Tue Jun 28 23:07:04 +0000 2016",
+    "id": 747929335198191600,
+    "id_str": "747929335198191616",
+    "text": ".@PartyCity hey guys you were right the Harambe piñata was a bad idea",
+    "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
     "truncated": false,
     "in_reply_to_status_id": null,
     "in_reply_to_status_id_str": null,
@@ -101,39 +67,39 @@
     "in_reply_to_user_id_str": null,
     "in_reply_to_screen_name": null,
     "user": {
-      "id": 810424,
-      "id_str": "810424",
-      "name": "Gothamist",
-      "screen_name": "Gothamist",
-      "location": "New York, NY",
-      "url": "http://www.Gothamist.com",
-      "description": "Gothamist is a website about New York City and everything that happens in it.",
+      "id": 1621424731,
+      "id_str": "1621424731",
+      "name": "dan mentos",
+      "screen_name": "DanMentos",
+      "location": "San Francisco",
+      "url": null,
+      "description": "I'm the reason @murrman5 left",
       "protected": false,
-      "verified": true,
-      "followers_count": 473341,
-      "friends_count": 633,
-      "listed_count": 6638,
-      "favourites_count": 138,
-      "statuses_count": 100476,
-      "created_at": "Sun Mar 04 16:58:18 +0000 2007",
-      "utc_offset": -14400,
-      "time_zone": "Eastern Time (US & Canada)",
+      "verified": false,
+      "followers_count": 49653,
+      "friends_count": 735,
+      "listed_count": 872,
+      "favourites_count": 79492,
+      "statuses_count": 30974,
+      "created_at": "Thu Jul 25 22:11:25 +0000 2013",
+      "utc_offset": -25200,
+      "time_zone": "Pacific Time (US & Canada)",
       "geo_enabled": true,
       "lang": "en",
       "contributors_enabled": false,
       "is_translator": false,
-      "profile_background_color": "E5E3E3",
-      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/3202940/twitter.gif",
-      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/3202940/twitter.gif",
-      "profile_background_tile": false,
-      "profile_link_color": "FF0000",
-      "profile_sidebar_border_color": "999999",
-      "profile_sidebar_fill_color": "D8D6D6",
-      "profile_text_color": "191919",
-      "profile_use_background_image": true,
-      "profile_image_url": "http://pbs.twimg.com/profile_images/482838063668682753/ulq-goPG_normal.png",
-      "profile_image_url_https": "https://pbs.twimg.com/profile_images/482838063668682753/ulq-goPG_normal.png",
-      "profile_banner_url": "https://pbs.twimg.com/profile_banners/810424/1403953332",
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000068604713/b78b705cd2974732d36490534f0238af.jpeg",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000068604713/b78b705cd2974732d36490534f0238af.jpeg",
+      "profile_background_tile": true,
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/548378022768701441/2zz0Vk61_normal.png",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/548378022768701441/2zz0Vk61_normal.png",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/1621424731/1382380808",
       "default_profile": false,
       "default_profile_image": false,
       "following": null,
@@ -145,139 +111,63 @@
     "place": null,
     "contributors": null,
     "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
+    "retweet_count": 10,
+    "favorite_count": 48,
     "entities": {
-      "hashtags": [
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [
         {
-          "text": "Famous",
+          "screen_name": "PartyCity",
+          "name": "Party City",
+          "id": 67432980,
+          "id_str": "67432980",
           "indices": [
-            24,
-            31
+            1,
+            11
           ]
         }
       ],
-      "urls": [
-        {
-          "url": "https://t.co/BGsCprXcJq",
-          "expanded_url": "http://gothamist.com/2016/06/27/lena_dunham_kanye_west_taylor_swift_reaction.php",
-          "display_url": "gothamist.com/2016/06/27/len…",
-          "indices": [
-            76,
-            99
-          ]
-        }
-      ],
-      "user_mentions": [],
-      "symbols": [],
-      "media": [
-        {
-          "id": 747537377317519400,
-          "id_str": "747537377317519361",
-          "indices": [
-            100,
-            123
-          ],
-          "media_url": "http://pbs.twimg.com/media/Cl_JSLdWgAEivZg.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/Cl_JSLdWgAEivZg.jpg",
-          "url": "https://t.co/DYFebV5qrN",
-          "display_url": "pic.twitter.com/DYFebV5qrN",
-          "expanded_url": "http://twitter.com/Gothamist/status/747537420233637888/photo/1",
-          "type": "photo",
-          "sizes": {
-            "large": {
-              "w": 640,
-              "h": 252,
-              "resize": "fit"
-            },
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "small": {
-              "w": 640,
-              "h": 252,
-              "resize": "fit"
-            },
-            "medium": {
-              "w": 640,
-              "h": 252,
-              "resize": "fit"
-            }
-          }
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "id": 747537377317519400,
-          "id_str": "747537377317519361",
-          "indices": [
-            100,
-            123
-          ],
-          "media_url": "http://pbs.twimg.com/media/Cl_JSLdWgAEivZg.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/Cl_JSLdWgAEivZg.jpg",
-          "url": "https://t.co/DYFebV5qrN",
-          "display_url": "pic.twitter.com/DYFebV5qrN",
-          "expanded_url": "http://twitter.com/Gothamist/status/747537420233637888/photo/1",
-          "type": "photo",
-          "sizes": {
-            "large": {
-              "w": 640,
-              "h": 252,
-              "resize": "fit"
-            },
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "small": {
-              "w": 640,
-              "h": 252,
-              "resize": "fit"
-            },
-            "medium": {
-              "w": 640,
-              "h": 252,
-              "resize": "fit"
-            }
-          }
-        }
-      ]
+      "symbols": []
     },
     "favorited": false,
     "retweeted": false,
-    "possibly_sensitive": false,
     "filter_level": "low",
     "lang": "en"
   },
-  "is_quote_status": true,
+  "is_quote_status": false,
   "retweet_count": 0,
   "favorite_count": 0,
   "entities": {
     "hashtags": [],
-    "urls": [
+    "urls": [],
+    "user_mentions": [
       {
-        "url": "https://t.co/UMPZhDv5Sb",
-        "expanded_url": "https://twitter.com/gothamist/status/747537420233637888",
-        "display_url": "twitter.com/gothamist/stat…",
+        "screen_name": "DanMentos",
+        "name": "dan mentos",
+        "id": 1621424731,
+        "id_str": "1621424731",
         "indices": [
-          4,
-          27
+          3,
+          13
+        ]
+      },
+      {
+        "screen_name": "PartyCity",
+        "name": "Party City",
+        "id": 67432980,
+        "id_str": "67432980",
+        "indices": [
+          16,
+          26
         ]
       }
     ],
-    "user_mentions": [],
     "symbols": []
   },
   "favorited": false,
   "retweeted": false,
-  "possibly_sensitive": false,
   "filter_level": "low",
-  "lang": "und",
-  "timestamp_ms": "1467127287980"
+  "lang": "en",
+  "timestamp_ms": "1467155764038"
 }

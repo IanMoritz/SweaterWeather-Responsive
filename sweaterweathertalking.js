@@ -341,10 +341,10 @@ T.post('statuses/update', tweet, tweeted);
 
 function sendError(){  //relearn how to use functions
     console.log(from);
-    newTweet = '@' + from + ' Sorry! Looks like your tweet was not geotagged and it did not include a zipcode.'
+    // newTweet = '@' + from + ' Sorry! Looks like your tweet was not geotagged and it did not include a zipcode.'
     sendIt(newTweet);  
 }
 
-function exit(){
-    console.log("weird error");
-}
+// function exit(){
+//     console.log("weird error");
+// }
