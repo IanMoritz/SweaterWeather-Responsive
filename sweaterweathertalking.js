@@ -15,14 +15,18 @@ stream.on('tweet',tweetEvent);
 
 function tweetEvent(eventMsg){
 
-    var fs = require ('fs');    //write JSON 1/3
-    var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
-    fs.writeFile("tweet.JSON", json);  //write JSON 3/3
+    // var fs = require ('fs');    //write JSON 1/3
+    // var json = JSON.stringify(eventMsg,null,2);  //write JSON 2/3
+    // fs.writeFile("tweet.JSON", json);  //write JSON 3/3
     
     spark = eventMsg.text.search(/sweaters_today/i);
+    retweet = typeof eventMsg.retweeted_status;
 
-    if (spark != -1){
+    console.log(retweet);
+
+    if (spark != -1 && retweet != "object"){
         respond();
+        console.log("I'm going to respond")
     }
 
     function respond (){
