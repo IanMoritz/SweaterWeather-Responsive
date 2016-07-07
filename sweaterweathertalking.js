@@ -21,10 +21,10 @@ function tweetEvent(eventMsg){
     
     spark = eventMsg.text.search(/sweaters_today/i);
     retweet = typeof eventMsg.retweeted_status;
+    // console.log(spark);
+    // console.log(retweet);
 
-    console.log(retweet);
-
-    if (spark != -1 && retweet != "object"){
+    if (spark != -1 && retweet == "undefined"){
         respond();
         console.log("I'm going to respond")
     }
